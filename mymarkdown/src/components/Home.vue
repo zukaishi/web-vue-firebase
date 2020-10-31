@@ -1,0 +1,16 @@
+<template>
+<divid="home">
+<h1>{{msg}}</h1>
+<button>Googleアカウントでログイン</button>
+</div>
+</template>
+<script>
+    exportdefault{
+        name:"home",
+        data(){
+            return{
+                msg:"WelcometoMyMarkdown"
+            };
+        }
+    };
+</script>
