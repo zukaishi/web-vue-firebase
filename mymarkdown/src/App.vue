@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Homefrom "./components/Home.vue";
+import Home from "./components/Home.vue";
 import Editor from "./components/Editor.vue"
 
 export default {
