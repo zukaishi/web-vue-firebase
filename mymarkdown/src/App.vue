@@ -8,6 +8,7 @@
 <script>
 import Home from "./components/Home.vue";
 import Editor from "./components/Editor.vue"
+import firebase from 'firebase'
 
 export default {
   name: 'app',
