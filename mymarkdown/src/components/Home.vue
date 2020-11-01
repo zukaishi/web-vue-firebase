@@ -1,11 +1,11 @@
 <template>
-<divid="home">
-<h1>{{msg}}</h1>
-<button>Googleアカウントでログイン</button>
-</div>
+    <div id="home">
+        <h1>{{msg}}</h1>
+        <button>Googleアカウントでログイン</button>
+    </div>
 </template>
 <script>
-    exportdefault{
+    export default{
         name:"home",
         data(){
             return{
