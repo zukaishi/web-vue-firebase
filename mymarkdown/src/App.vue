@@ -17,6 +17,16 @@ export default {
       isLogin: false
     }
   },
+  created: {
+    firebase.auth().onAuthStateChanged( user => {
+      console.log(user);
+      if(user) {
+        this.isLogin = true;
+      } else{
+        this.isLogin = false;
+      };
+    });
+  },
   components: {
     Home:Home,
     Editor: Editor
