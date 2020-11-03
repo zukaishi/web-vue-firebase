@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Home v-if="!isLogin"></Home>
-    <Editor v-if="isLogin"</Editor>
+    <Editor v-if="isLogin"></Editor>
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 import Home from "./components/Home.vue";
 import Editor from "./components/Editor.vue"
 import firebase from 'firebase'
+firebase.initializeApp(firebaseConfig);
 
 export default {
   name: 'app',
@@ -22,6 +23,7 @@ export default {
       console.log(user);
       if(user) {
         this.isLogin = true;
+        console.log("testest");
       } else{
         this.isLogin = false;
       };
