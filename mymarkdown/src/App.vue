@@ -17,7 +17,7 @@ export default {
       isLogin: false
     }
   },
-  created: {
+  created: function() {
     firebase.auth().onAuthStateChanged( user => {
       console.log(user);
       if(user) {
