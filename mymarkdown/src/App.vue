@@ -15,7 +15,8 @@ export default {
   name: 'app',
   data () {
     return {
-      isLogin: false
+      isLogin: false,
+      userData: null
     }
   },
   created: function() {
