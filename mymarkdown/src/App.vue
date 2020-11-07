@@ -24,8 +24,10 @@ export default {
       console.log(user);
       if(user) {
         this.isLogin = true;
+        this.userData = user;
       } else{
         this.isLogin = false;
+        this.userData = null;
       };
     });
   },
