@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Home v-if="!isLogin"></Home>
-    <Editor v-if="isLogin"></Editor>
+    <Editor v-if="isLogin" :user="userData"></Editor>
   </div>
 </template>
 
@@ -23,7 +23,6 @@ export default {
       console.log(user);
       if(user) {
         this.isLogin = true;
-        console.log("testest");
       } else{
         this.isLogin = false;
       };
