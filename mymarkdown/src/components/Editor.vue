@@ -8,13 +8,14 @@
 <script>
     export default {
         name: "editor",
+        props:["user"],
         data() {
             return {};
-        }
-    },
-    methods: {
-        logout: funtion() {
-            firebase.auth().signOut();
+        },
+        methods: {
+            logout: function() {
+                firebase.auth().signOut();
+            }
         }
     };
 </script>
