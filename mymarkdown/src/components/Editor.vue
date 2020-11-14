@@ -20,7 +20,12 @@ export default {
     props:["user"],
     data() {
         return {
-            markdown: ""
+            memos: [
+                {
+                    markdown: ""
+                }
+            ],
+            selectedIndex: 0
         };
     },
     methods: {
