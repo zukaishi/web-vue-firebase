@@ -3,6 +3,10 @@
         <h1>エディター画面</h1>
         <span>{{user.displayName}}</span>
         <button @click="logout">ログアウト</button>
+        <div class="editorWrapper">
+            <textarea class="markdown" v-model="markdown"></textarea>
+            <div class="preview" v-html="preview()"></div>
+        </div>
     </div>
 </template>
 <script>
