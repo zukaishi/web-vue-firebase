@@ -32,8 +32,19 @@ export default {
         logout: function() {
             firebase.auth().signOut();
         },
+        addMemo: function() {
+            this.memos.push({
+                markdown:"無題のメモ"
+            })；
+        },
+        selectMemo: function() {
+            this.selectedIndex = index;
+        },
         preview: function() {
-            return marked(this.markdown);
+            return marked(this.memos[this.selectedIndex].markdown);
+        },
+        displayTitle: function () {
+            return text.split(¥/n¥)[0];
         }
     }
 };
