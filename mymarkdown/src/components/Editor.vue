@@ -10,16 +10,22 @@
     </div>
 </template>
 <script>
-    export default {
-        name: "editor",
-        props:["user"],
-        data() {
-            return {};
+import marked from "marked";
+export default {
+    name: "editor",
+    props:["user"],
+    data() {
+        return {
+            markdown: ""
+        };
+    },
+    methods: {
+        logout: function() {
+            firebase.auth().signOut();
         },
-        methods: {
-            logout: function() {
-                firebase.auth().signOut();
-            }
+        preview: function() {
+            return marked(this.markdown);
         }
-    };
+    }
+};
 </script>
