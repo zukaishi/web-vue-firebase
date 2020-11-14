@@ -29,3 +29,16 @@ export default {
     }
 };
 </script>
+<style lang="scss" scoped>
+.editorWrapper { 
+    display: flex;
+}
+.markdown {
+    width: 50%;
+    height: 500px;
+}
+.preview { 
+    width: 50%;
+    text-align: left;
+}
+</style>
