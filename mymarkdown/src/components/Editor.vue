@@ -4,15 +4,18 @@
         <span>{{user.displayName}}</span>
         <button @click="logout">ログアウト</button>
         <div class="editorWrapper">
-            <div class="memoList" v-for"(memo, index) in memos" :key=index"@click=selectMemo(index)" :data-selected="index == selectedIndex">
-                <p class="memoTitle">{{ displayTitle(memo.markdown) }}</p>
+            <div class="memoListWrapper">
+                <div class="memoList" v-for"(memo, index) in memos" :key=index"@click=selectMemo(index)" :data-selected="index == selectedIndex">
+                    <p class="memoTitle">{{ displayTitle(memo.markdown) }}</p>
+                </div>
+                <button class="addMemoBtn" @click="addMemo">メモの追加</button>
+                <textarea class="markdown" v-model="markdown"></textarea>
+                <div class="preview" v-html="preview()"></div>
             </div>
-            <button class="addMemoBtn" @click="addMemo">メモの追加</button>
-            <textarea class="markdown" v-model="markdown"></textarea>
-            <div class="preview" v-html="preview()"></div>
         </div>
     </div>
 </template>
+
 <script>
 import marked from "marked";
 export default {
@@ -52,6 +55,10 @@ export default {
 <style lang="scss" scoped>
 .editorWrapper { 
     display: flex;
+}
+.memoListWrapper {
+    width:20%;
+    border-top: 1px solid #000;
 }
 .markdown {
     width: 50%;
