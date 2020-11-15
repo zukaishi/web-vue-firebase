@@ -5,7 +5,7 @@
         <button @click="logout">ログアウト</button>
         <div class="editorWrapper">
             <div class="memoListWrapper">
-                <div class="memoList" v-for"(memo, index) in memos" :key=index"@click=selectMemo(index)" :data-selected="index == selectedIndex">
+                <div class="memoList" v-for="(memo, index) in memos" :key="index"@click="selectMemo(index)" :data-selected="index == selectedIndex">
                     <p class="memoTitle">{{ displayTitle(memo.markdown) }}</p>
                 </div>
                 <button class="addMemoBtn" @click="addMemo">メモの追加</button>
@@ -37,7 +37,7 @@ export default {
         },
         addMemo: function() {
             this.memos.push({
-                markdown:"無題のメモ"
+                markdown: "無題のメモ"
             });
         },
         selectMemo: function() {
@@ -46,7 +46,7 @@ export default {
         preview: function() {
             return marked(this.memos[this.selectedIndex].markdown);
         },
-        displayTitle: function () {
+        displayTitle: function (text) {
             return text.split(/\n/)[0];
        }
     }
@@ -59,6 +59,16 @@ export default {
 .memoListWrapper {
     width:20%;
     border-top: 1px solid #000;
+}
+
+.memoList{
+    
+}
+.memoTitle{
+
+}
+.addMemoBtn{
+
 }
 .markdown {
     width: 50%;
