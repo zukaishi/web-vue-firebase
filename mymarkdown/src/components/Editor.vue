@@ -35,7 +35,7 @@ export default {
         addMemo: function() {
             this.memos.push({
                 markdown:"無題のメモ"
-            })；
+            });
         },
         selectMemo: function() {
             this.selectedIndex = index;
@@ -44,8 +44,8 @@ export default {
             return marked(this.memos[this.selectedIndex].markdown);
         },
         displayTitle: function () {
-            return text.split(¥/n¥)[0];
-        }
+            return text.split(/\n/)[0];
+       }
     }
 };
 </script>
