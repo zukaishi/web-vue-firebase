@@ -62,7 +62,13 @@ export default {
 }
 
 .memoList{
-    
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+    border-bottom: 1px solid #000;
+    &:nth-child(even) {
+        background-color: #ccf;
+    }
 }
 .memoTitle{
 
