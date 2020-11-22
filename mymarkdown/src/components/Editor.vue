@@ -67,6 +67,9 @@ export default {
     text-align: left;
     border-bottom: 1px solid #000;
     &:nth-child(even) {
+        background-color: #ccc;
+    }
+    &[data-selected="true"] {
         background-color: #ccf;
     }
 }
@@ -84,7 +87,7 @@ export default {
     height: 500px;
 }
 .preview { 
-    width: 50%;
+    width: 40%;
     text-align: left;
 }
 </style>
