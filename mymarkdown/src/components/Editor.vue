@@ -23,11 +23,9 @@ export default {
     props:["user"],
     data() {
         return {
-            memos: [
-                {
+            memos: [{
                     markdown: ""
-                }
-            ],
+                }],
             selectedIndex: 0
         };
     },
