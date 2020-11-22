@@ -60,7 +60,6 @@ export default {
     width:20%;
     border-top: 1px solid #000;
 }
-
 .memoList{
     padding: 10px;
     box-sizing: border-box;
