@@ -1,6 +1,10 @@
 {
   "rules": {
-    ".read": false,
-    ".write": false
+    "memos" : {
+        "$uid" : { 
+            ".read" : "$uid === auth.uid",
+            ".write": "$uid === auth.uid"
+        }
+    }
   }
 }
